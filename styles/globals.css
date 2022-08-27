@@ -1,26 +1,12 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@tailwind base;
+@tailwind components;
+
+.modal-white {
+    @apply bg-white rounded-lg p-8 mx-8 flex flex-col gap-2 shadow-lg
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+@tailwind utilities;
 
 * {
-  box-sizing: border-box;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+    font-family: 'nanumsquare';
 }
