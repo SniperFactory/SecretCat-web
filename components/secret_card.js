@@ -7,4 +7,3 @@ export default function SecretCard({secretObject}){
     </article>
     </>
 }
-// deprecated

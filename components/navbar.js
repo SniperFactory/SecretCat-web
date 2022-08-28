@@ -9,8 +9,6 @@ export default function NavBar() {
             <div className="container mx-auto flex">
                 <Link href="/" className="text-lg font-bold">비밀듣는고양이</Link>
                 <div className="ml-auto flex gap-4">
-                    <Link href={"/secrets"}>전체비밀</Link>
-                    
                     { userInfo 
                         ? <>
                             <Link href={"/my"}>나의정보</Link>

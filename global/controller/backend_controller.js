@@ -55,13 +55,16 @@ export const BackendProvider = ({children}) => {
         }
     }
     useEffect(()=>{
+        let _secret_cat_pbData = window.localStorage.getItem('secret_cat_pbData');
         client.authStore.onChange((token, model) => {
             if(!client.authStore.isValid) return;
+            console.log(router.route)
             setToken(token)
             setUserInfo(model)
-            router.push('/my')
+            window.localStorage.setItem('secret_cat_pbData', client.authStore.exportToCookie());
+            router.push(router.route == "/login" ? "/" : router.route)
         })
-        client.authStore.loadFromCookie(window.localStorage.getItem('secret_cat_pbData'))
+        client.authStore.loadFromCookie(_secret_cat_pbData)
     },[])
 
 
